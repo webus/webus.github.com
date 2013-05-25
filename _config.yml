@@ -1,0 +1,4 @@
+name: // webus blog
+pygments: true
+permalink: /:year/:month/:title.html
+paginate: 10

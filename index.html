@@ -1,23 +1,13 @@
-<html>
-<head>
-<link href='http://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC' rel='stylesheet' type='text/css'>
-    <style>
-      body {
-        font-family: 'IM Fell DW Pica SC', arial, serif;
-        font-size: 48px;
-      }
-    </style>
-<title>webus blog on github</title>
-</head>
-<body bgcolor="grey" text="white" alink="white" vlink="white" link="white">
-<center>
-<h1 align="center">
-this blog will be entirely devoted to the development.</br>
-i'll highlight here my ideas, projects, and approaches to development.</br>
-i hope you will find my blog  interesting. see you soon!
-</h1>
-<a href="http://github.com/webus">go to github page</a></br>
-<a href="http://twitter.com/webusnix">see my twitter</a>
-</center>
-</body>
-</html>
+---
+layout: default
+title: webus blog
+---
+
+<div id="home">
+  <h1>Посты</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
