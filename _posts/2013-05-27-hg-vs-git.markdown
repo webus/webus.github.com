@@ -1,0 +1,27 @@
+---
+layout: post
+title:  "hg vs git"
+date:   2013-05-27 00:03:49
+categories: mercurial hg git
+---
+
+Так уже сложилось что большую часть времени я использовал Mercurial.
+Но пришлось тут столкнуться с Git, и я с ужасом обнаружил что у него нет аналога команды
+{% highlight bash %}
+hg addrm .
+{% endhighlight %}
+Покопался в интернете и нашел ужасный изврат
+{% highlight bash %}
+git add .
+git ls-files --deleted | xargs git rm
+{% endhighlight %}
+Или вот так
+{% highlight bash %}
+git add static
+git add -u static
+{% endhighlight %}
+А говорят что и вот так работает
+{% highlight bash %}
+git add -A
+{% endhighlight %}
+До чего же многословен этот ваш Git, ребята.
