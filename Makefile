@@ -1,2 +1,2 @@
 all: 
-	jekyll serve
+	jekyll serve --trace
